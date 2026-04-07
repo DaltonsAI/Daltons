@@ -432,3 +432,59 @@ export type InsertSetting = z.infer<typeof insertSettingSchema>
 export const userConnections = accounts
 export type UserConnection = Account
 export type InsertUserConnection = InsertAccount
+
+// Subscriptions table - Stripe subscription data per user
+export const subscriptions = pgTable('subscriptions', {
+  id: text('id').primaryKey(), // Stripe subscription ID
+  userId: text('user_id')
+    .notNull()
+    .references(() => users.id, { onDelete: 'cascade' }),
+  stripeCustomerId: text('stripe_customer_id').notNull(),
+  stripePriceId: text('stripe_price_id').notNull(),
+  plan: text('plan', {
+    enum: ['free', 'pro', 'enterprise'],
+  })
+    .notNull()
+    .default('free'),
+  status: text('status', {
+    enum: ['active', 'canceled', 'incomplete', 'past_due', 'trialing', 'unpaid'],
+  })
+    .notNull()
+    .default('active'),
+  currentPeriodStart: timestamp('current_period_start'),
+  currentPeriodEnd: timestamp('current_period_end'),
+  cancelAtPeriodEnd: boolean('cancel_at_period_end').default(false),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+})
+
+export const insertSubscriptionSchema = z.object({
+  id: z.string(),
+  userId: z.string(),
+  stripeCustomerId: z.string(),
+  stripePriceId: z.string(),
+  plan: z.enum(['free', 'pro', 'enterprise']).default('free'),
+  status: z.enum(['active', 'canceled', 'incomplete', 'past_due', 'trialing', 'unpaid']).default('active'),
+  currentPeriodStart: z.date().optional(),
+  currentPeriodEnd: z.date().optional(),
+  cancelAtPeriodEnd: z.boolean().default(false),
+  createdAt: z.date().optional(),
+  updatedAt: z.date().optional(),
+})
+
+export const selectSubscriptionSchema = z.object({
+  id: z.string(),
+  userId: z.string(),
+  stripeCustomerId: z.string(),
+  stripePriceId: z.string(),
+  plan: z.enum(['free', 'pro', 'enterprise']),
+  status: z.enum(['active', 'canceled', 'incomplete', 'past_due', 'trialing', 'unpaid']),
+  currentPeriodStart: z.date().nullable(),
+  currentPeriodEnd: z.date().nullable(),
+  cancelAtPeriodEnd: z.boolean().nullable(),
+  createdAt: z.date(),
+  updatedAt: z.date(),
+})
+
+export type Subscription = z.infer<typeof selectSubscriptionSchema>
+export type InsertSubscription = z.infer<typeof insertSubscriptionSchema>

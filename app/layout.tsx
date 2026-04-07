@@ -20,9 +20,27 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Coding Agent Template',
+  title: 'Daltons AI — Gekwalificeerde B2B Leads op Autopilot',
   description:
-    'AI-powered coding agent template supporting Claude Code, OpenAI Codex CLI, Cursor CLI, and opencode with Vercel Sandbox',
+    'Daltons AI levert dagelijks gekwalificeerde B2B leads via Apollo prospecting, Claude AI scoring en Instantly outreach. Starter, Growth en Enterprise campagnes.',
+  keywords: ['B2B leads', 'lead generation', 'AI scoring', 'Apollo', 'outreach', 'Daltons AI'],
+  authors: [{ name: 'Daltons AI BV' }],
+  openGraph: {
+    title: 'Daltons AI — Gekwalificeerde B2B Leads op Autopilot',
+    description: 'Dagelijks gekwalificeerde B2B leads via AI. Starter vanaf €997/campagne.',
+    type: 'website',
+    locale: 'nl_NL',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Daltons AI — B2B Leads op Autopilot',
+    description: 'Dagelijks gekwalificeerde B2B leads via AI.',
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+  },
 }
 
 export default function RootLayout({

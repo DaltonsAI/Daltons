@@ -6,6 +6,23 @@
       "productSlug": "neon",
       "integrationSlug": "neon"
     }
-  ]
+  ],
+  "env": {
+    "STRIPE_SECRET_KEY": {
+      "description": "Stripe secret key (sk_live_... or sk_test_...)",
+      "required": false
+    },
+    "STRIPE_WEBHOOK_SECRET": {
+      "description": "Stripe webhook signing secret (whsec_...)",
+      "required": false
+    },
+    "STRIPE_PRO_PRICE_ID": {
+      "description": "Stripe Price ID for the Pro plan (price_...)",
+      "required": false
+    },
+    "STRIPE_ENTERPRISE_PRICE_ID": {
+      "description": "Stripe Price ID for the Enterprise plan (price_...)",
+      "required": false
+    }
+  }
 }
-

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Algemene Voorwaarden — Daltons AI B.V.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#06060F;--bg2:#0C0C1C;--sur:#131325;--border:rgba(255,255,255,.07);--gold:#C9A227;--gold2:#E8C84A;--cyan:#00D4FF;--white:#fff;--gray:#8892A4;--gray2:#4A5568;--ff-d:'Space Grotesk',sans-serif;--ff:'Inter',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1);}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--white);font-family:var(--ff);-webkit-font-smoothing:antialiased;line-height:1.7;}
+a{color:var(--cyan);text-decoration:none;}a:hover{text-decoration:underline;}
+
+#cv{position:fixed;inset:0;z-index:0;pointer-events:none;}
+
+.nav{position:sticky;top:0;z-index:100;background:rgba(6,6,15,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:.9rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:var(--ff-d);font-size:1rem;font-weight:800;color:var(--white);}
+.logo em{color:var(--gold2);font-style:normal;}
+.nav-back{font-size:.8rem;color:var(--gray);transition:color .2s;}
+.nav-back:hover{color:var(--white);}
+
+.wrap{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:4rem 2rem 6rem;}
+
+.doc-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .7rem;background:rgba(201,162,39,.08);border:1px solid rgba(201,162,39,.2);border-radius:99px;font-size:.68rem;font-weight:600;color:var(--gold2);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.2rem;}
+h1{font-family:var(--ff-d);font-size:2.4rem;font-weight:800;letter-spacing:-1.5px;margin-bottom:.4rem;}
+.meta{font-size:.78rem;color:var(--gray);margin-bottom:2.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border);}
+h2{font-family:var(--ff-d);font-size:1.2rem;font-weight:700;color:var(--white);margin:2.2rem 0 .7rem;}
+p{font-size:.9rem;color:var(--gray);margin-bottom:1rem;line-height:1.82;}
+ul,ol{margin:.5rem 0 1rem 1.4rem;}
+li{font-size:.9rem;color:var(--gray);margin-bottom:.4rem;line-height:1.72;}
+strong{color:var(--white);}
+.highlight{padding:1rem 1.2rem;background:rgba(201,162,39,.06);border:1px solid rgba(201,162,39,.18);border-radius:8px;font-size:.86rem;color:var(--off,#E8E4D9);margin:1.2rem 0;}
+footer-bar{display:block;border-top:1px solid var(--border);padding-top:1.5rem;margin-top:3rem;font-size:.75rem;color:var(--gray2);text-align:center;}
+
+.rv{opacity:0;transform:translateY(24px);transition:opacity .65s var(--ease),transform .65s var(--ease);}
+.rv.in{opacity:1;transform:none;}
+</style>
+</head>
+<body>
+<canvas id="cv"></canvas>
+<nav class="nav" style="position:relative;z-index:100;">
+  <div class="logo">Daltons<em> AI</em></div>
+  <a href="../" class="nav-back">← Terug naar website</a>
+</nav>
+<div class="wrap">
+  <div class="doc-badge rv">Juridisch document</div>
+  <h1 class="rv" style="transition-delay:.05s;">Algemene Voorwaarden</h1>
+  <div class="meta rv" style="transition-delay:.1s;">Daltons AI B.V. · KvK 97688835 · Versie 1.0 · Ingangsdatum: 1 januari 2025 · Daltonsaisystems@gmail.com</div>
+
+  <h2 class="rv">Artikel 1 — Definities</h2>
+  <p class="rv"><strong>Daltons AI B.V.</strong> (hierna: "Daltons AI", "wij", "ons"), geregistreerd bij de Kamer van Koophandel onder nummer 97688835, levert diensten op het gebied van B2B leadgeneratie via kunstmatige intelligentie.</p>
+  <p class="rv"><strong>"Klant"</strong>: de rechtspersoon of natuurlijke persoon die een abonnement afsluit bij Daltons AI.</p>
+  <p class="rv"><strong>"Hot Lead"</strong>: een B2B contactgegeven met een AI-kwaliteitsscore van minimaal 70/100 op vijf scoringsdimensies.</p>
+  <p class="rv"><strong>"ICP"</strong>: Ideal Customer Profile — het door de klant aangeleverde profiel van de gewenste doelgroep.</p>
+  <p class="rv"><strong>"Dienst"</strong>: het leveren van AI-gescreende B2B hot leads op kwartaalabonnement.</p>
+
+  <h2 class="rv">Artikel 2 — Toepasselijkheid</h2>
+  <p class="rv">Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, overeenkomsten en leveringen van Daltons AI aan klanten. Door een abonnement af te sluiten, aanvaardt de klant deze voorwaarden.</p>
+
+  <h2 class="rv">Artikel 3 — De Dienst</h2>
+  <p class="rv">Daltons AI levert B2B hot leads op basis van het door de klant aangeleverde ICP. Alle geleverde leads hebben een AI-kwaliteitsscore van minimaal 70/100. Het systeem scoort op:</p>
+  <ul class="rv">
+    <li>Functietitel match (max 25 punten)</li>
+    <li>Bedrijfsfit (max 25 punten)</li>
+    <li>Bedrijfsgrootte (max 20 punten)</li>
+    <li>Marktafstemming (max 15 punten)</li>
+    <li>Koopsignalen (max 15 punten)</li>
+  </ul>
+  <p class="rv">Leads worden geleverd als CSV of Excel bestand, inclusief naam, bedrijfsnaam, functietitel, zakelijk e-mailadres, LinkedIn-URL en AI-score per dimensie.</p>
+
+  <h2 class="rv">Artikel 4 — Abonnement &amp; Betaling</h2>
+  <div class="highlight rv">Alle abonnementen worden automatisch verlengd na elke kwartaalperiode (3 maanden). Betalingen verlopen via Stripe. Prijzen zijn exclusief BTW.</div>
+  <ul class="rv">
+    <li><strong>Starter Plan</strong>: €497 per kwartaal (30 hot leads)</li>
+    <li><strong>Growth Plan</strong>: €1.197 per kwartaal (100 hot leads)</li>
+    <li><strong>Enterprise Plan</strong>: €2.997 per kwartaal (350+ hot leads)</li>
+  </ul>
+  <p class="rv">Bij niet-betaling behoudt Daltons AI het recht de dienstverlening op te schorten totdat betaling is ontvangen.</p>
+
+  <h2 class="rv">Artikel 5 — Opzegging &amp; Wijziging</h2>
+  <p class="rv">Opzeggen kan op elk moment via het klantendashboard of per e-mail aan <a href="mailto:Daltonsaisystems@gmail.com">Daltonsaisystems@gmail.com</a>, uiterlijk <strong>14 dagen voor de verlengingsdatum</strong>. Bij tijdige opzegging wordt het abonnement niet verlengd. Er worden geen kosten in rekening gebracht voor opzegging.</p>
+  <p class="rv">Upgraden naar een hoger plan is direct actief. Downgraden gaat in per de volgende kwartaalperiode.</p>
+
+  <h2 class="rv">Artikel 6 — Aansprakelijkheid</h2>
+  <p class="rv">Daltons AI garandeert dat alle geleverde leads voldoen aan de minimale score van 70/100. Daltons AI is niet aansprakelijk voor commercieel resultaat (conversies, omzet) dat de klant al dan niet realiseert met de geleverde leads.</p>
+  <p class="rv">De totale aansprakelijkheid van Daltons AI is in alle gevallen beperkt tot het bedrag dat de klant in het betreffende kwartaal heeft betaald.</p>
+
+  <h2 class="rv">Artikel 7 — Intellectueel Eigendom</h2>
+  <p class="rv">De AI-methodologie, het scoringssysteem en alle bijbehorende technologie blijven eigendom van Daltons AI B.V. De geleverde leadbestanden zijn eigendom van de klant voor gebruik in de eigen salescommunicatie.</p>
+
+  <h2 class="rv">Artikel 8 — Toepasselijk Recht</h2>
+  <p class="rv">Op deze overeenkomst is uitsluitend Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechtbank te Amsterdam.</p>
+
+  <h2 class="rv">Artikel 9 — Contact</h2>
+  <p class="rv">Daltons AI B.V. · KvK 97688835 · <a href="mailto:Daltonsaisystems@gmail.com">Daltonsaisystems@gmail.com</a></p>
+
+  <footer-bar class="rv">© 2024–2026 Daltons AI B.V. · KvK 97688835 · <a href="../privacy-policy/">Privacy Policy</a> · <a href="../dpa/">DPA</a> · <a href="../">Website</a></footer-bar>
+</div>
+<script src="../js/aurora4d.js"></script>
+</body>
+</html>

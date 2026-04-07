@@ -25,7 +25,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user already has a subscription with a customer ID
-    const [existingSub] = await db.select().from(subscriptions).where(eq(subscriptions.userId, session.user.id)).limit(1)
+    const [existingSub] = await db
+      .select()
+      .from(subscriptions)
+      .where(eq(subscriptions.userId, session.user.id))
+      .limit(1)
 
     const origin = request.headers.get('origin') || 'http://localhost:3000'
 

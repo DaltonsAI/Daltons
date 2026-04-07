@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin — Daltons AI</title>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#04040C;--bg2:#0A0A18;--sur:#101020;--card:#181828;--border:rgba(255,255,255,.07);--gold:#C9A227;--gold2:#E8C84A;--cyan:#00D4FF;--green:#10B981;--red:#EF4444;--orange:#F59E0B;--white:#fff;--gray:#8892A4;--gray2:#4A5568;--ff-d:'Space Grotesk',sans-serif;--ff:'Inter',system-ui,sans-serif;--r:8px;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;}
+body{background:var(--bg);color:var(--white);font-family:var(--ff);-webkit-font-smoothing:antialiased;display:flex;}
+#cv{position:fixed;inset:0;z-index:0;pointer-events:none;}
+a{color:inherit;text-decoration:none;}
+.sidebar{width:220px;min-height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;flex-shrink:0;position:sticky;top:0;height:100vh;overflow-y:auto;}
+.sb-logo{padding:1.2rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.55rem;}
+.sb-logo-txt{font-family:var(--ff-d);font-size:.95rem;font-weight:800;}
+.sb-logo-txt em{color:var(--red);font-style:normal;}
+.sb-admin-badge{font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.15rem .45rem;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.25);border-radius:4px;color:var(--red);}
+.sb-nav{padding:.75rem .6rem;flex:1;}
+.sb-sect{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray2);margin:.9rem 0 .4rem .45rem;}
+.sb-link{display:flex;align-items:center;gap:.6rem;padding:.6rem .7rem;border-radius:6px;font-size:.8rem;font-weight:500;color:var(--gray);transition:all .2s;margin-bottom:.1rem;}
+.sb-link:hover{background:rgba(255,255,255,.04);color:var(--white);}
+.sb-link.active{background:rgba(239,68,68,.08);color:var(--red);border:1px solid rgba(239,68,68,.15);}
+.sb-link svg{width:15px;height:15px;flex-shrink:0;}
+.main{flex:1;overflow-y:auto;padding:1.8rem;}
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.8rem;}
+.page-title{font-family:var(--ff-d);font-size:1.5rem;font-weight:800;letter-spacing:-.4px;}
+.page-sub{font-size:.78rem;color:var(--gray);margin-top:.15rem;}
+.btn-sm{font-size:.76rem;font-weight:600;padding:.4rem .9rem;border-radius:6px;cursor:pointer;border:none;transition:all .2s;}
+.btn-red{background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2);}
+.btn-ghost{background:transparent;color:var(--gray);border:1px solid var(--border);}
+.btn-ghost:hover{border-color:rgba(255,255,255,.18);color:var(--white);}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1.8rem;}
+.stat{background:var(--sur);border:1px solid var(--border);border-radius:var(--r);padding:1.2rem 1rem;}
+.stat-n{font-family:var(--ff-d);font-size:1.9rem;font-weight:800;letter-spacing:-1px;line-height:1;margin-bottom:.2rem;}
+.stat-l{font-size:.66rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);}
+.stat-trend{font-size:.7rem;color:var(--green);margin-top:.35rem;}
+.section-card{background:var(--sur);border:1px solid var(--border);border-radius:var(--r);margin-bottom:1.2rem;}
+.card-head{padding:1rem 1.2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;}
+.card-title{font-size:.86rem;font-weight:700;}
+.card-sub{font-size:.7rem;color:var(--gray);}
+table{width:100%;border-collapse:collapse;}
+th{padding:.65rem 1.2rem;font-size:.65rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);text-align:left;border-bottom:1px solid var(--border);}
+td{padding:.8rem 1.2rem;font-size:.8rem;border-bottom:1px solid rgba(255,255,255,.03);color:var(--off,#E8E4D9);}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:rgba(255,255,255,.02);}
+.badge{display:inline-flex;align-items:center;padding:.18rem .5rem;border-radius:99px;font-size:.63rem;font-weight:700;letter-spacing:.04em;}
+.badge-green{background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.2);}
+.badge-orange{background:rgba(245,158,11,.1);color:var(--orange);border:1px solid rgba(245,158,11,.18);}
+.badge-red{background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.18);}
+.badge-gray{background:rgba(255,255,255,.05);color:var(--gray);border:1px solid var(--border);}
+.badge-cyan{background:rgba(0,212,255,.08);color:var(--cyan);border:1px solid rgba(0,212,255,.2);}
+.alert{padding:.9rem 1.2rem;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.2);border-radius:var(--r);margin-bottom:1.2rem;font-size:.82rem;color:var(--red);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+@media(max-width:900px){.stat-grid{grid-template-columns:repeat(2,1fr);}.two-col{grid-template-columns:1fr;}.sidebar{display:none;}}
+</style>
+</head>
+<body>
+<canvas id="cv"></canvas>
+
+<aside class="sidebar" style="position:relative;z-index:2;">
+  <div class="sb-logo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="#C9A227"/><ellipse cx="12" cy="12" rx="10" ry="4" stroke="#C9A227" stroke-width="1.2" fill="none" transform="rotate(-38 12 12)" opacity=".9"/></svg>
+    <div>
+      <div class="sb-logo-txt">Daltons<em> Admin</em></div>
+      <div class="sb-admin-badge">Intern</div>
+    </div>
+  </div>
+  <nav class="sb-nav">
+    <div class="sb-sect">Overzicht</div>
+    <a href="#" class="sb-link active"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>Dashboard</a>
+    <div class="sb-sect">Klanten</div>
+    <a href="#klanten" class="sb-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Klanten</a>
+    <a href="#abonnementen" class="sb-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Abonnementen</a>
+    <div class="sb-sect">Leads</div>
+    <a href="#leads" class="sb-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Lead bezorging</a>
+    <a href="#icps" class="sb-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>ICP Profielen</a>
+    <div class="sb-sect">Finance</div>
+    <a href="#revenue" class="sb-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Omzet</a>
+    <div class="sb-sect">Site</div>
+    <a href="../" class="sb-link"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Naar website</a>
+  </nav>
+</aside>
+
+<main class="main" style="position:relative;z-index:2;">
+  <div class="topbar">
+    <div><div class="page-title">Admin Panel</div><div class="page-sub">Daltons AI B.V. · KvK 97688835 · Intern gebruik</div></div>
+    <div style="display:flex;gap:.6rem;"><button class="btn-sm btn-ghost">Vernieuwen</button><button class="btn-sm btn-gold">+ Klant toevoegen</button></div>
+  </div>
+
+  <div class="alert">⚠️ Dit is een intern panel. Uitsluitend toegankelijk voor Daltons AI B.V. medewerkers.</div>
+
+  <!-- STATS -->
+  <div class="stat-grid">
+    <div class="stat"><div class="stat-n" style="color:var(--gold2);">€0</div><div class="stat-l">MRR (maandelijks)</div><div class="stat-trend">↗ Start fase</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--cyan);">0</div><div class="stat-l">Actieve klanten</div><div class="stat-trend">Early access open</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--green);">0</div><div class="stat-l">Leads bezorgd</div><div class="stat-trend">Eerste klanten welkom</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--orange);">0</div><div class="stat-l">Openstaande ICPs</div><div class="stat-trend">—</div></div>
+  </div>
+
+  <div class="two-col">
+    <!-- KLANTEN -->
+    <div class="section-card" id="klanten">
+      <div class="card-head"><div><div class="card-title">Klanten</div><div class="card-sub">Actieve abonnementen</div></div><button class="btn-sm btn-ghost">Exporteren</button></div>
+      <table>
+        <thead><tr><th>Bedrijf</th><th>Plan</th><th>Status</th><th>Leads</th></tr></thead>
+        <tbody>
+          <tr><td colspan="4" style="text-align:center;padding:2rem;color:var(--gray);font-size:.8rem;">Nog geen klanten. <a href="../#pricing" style="color:var(--cyan)">Abonnementen bekijken →</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- REVENUE -->
+    <div class="section-card" id="revenue">
+      <div class="card-head"><div><div class="card-title">Omzet Overzicht</div><div class="card-sub">Kwartaalabonnementen · Stripe</div></div></div>
+      <div style="padding:1.2rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.8rem;"><span style="color:var(--gray);">Starter (€497/kwartaal)</span><span>0 klanten</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.8rem;"><span style="color:var(--gray);">Growth (€1.197/kwartaal)</span><span>0 klanten</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:.7rem 0;border-bottom:1px solid var(--border);font-size:.8rem;"><span style="color:var(--gray);">Enterprise (€2.997/kwartaal)</span><span>0 klanten</span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:.9rem 0 0;font-size:.9rem;font-weight:700;"><span>Totaal kwartaal</span><span style="color:var(--gold2);">€0</span></div>
+        <p style="font-size:.7rem;color:var(--gray);margin-top:.5rem;">MRR equiv: €0 · Betalingen via Stripe</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEAD BEZORGING -->
+  <div class="section-card" id="leads">
+    <div class="card-head"><div><div class="card-title">Lead Bezorging</div><div class="card-sub">Status per klant</div></div><button class="btn-sm btn-ghost">+ Leads uploaden</button></div>
+    <table>
+      <thead><tr><th>Klant</th><th>Plan</th><th>ICP status</th><th>Leads bezorgd</th><th>Volgende bezorging</th><th>Actie</th></tr></thead>
+      <tbody>
+        <tr><td colspan="6" style="text-align:center;padding:2rem;color:var(--gray);font-size:.8rem;">Geen actieve bezorgingen.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ICP PROFILES -->
+  <div class="section-card" id="icps">
+    <div class="card-head"><div><div class="card-title">ICP Profielen</div><div class="card-sub">Ontvangen klantprofielen</div></div></div>
+    <div style="padding:1.5rem;text-align:center;color:var(--gray);font-size:.82rem;">
+      Nog geen ICP profielen ontvangen.<br>Klanten sturen hun ICP via <a href="mailto:Daltonsaisystems@gmail.com" style="color:var(--cyan)">Daltonsaisystems@gmail.com</a>.
+    </div>
+  </div>
+
+  <p style="text-align:center;font-size:.7rem;color:var(--gray2);margin-top:1.5rem;">Daltons AI B.V. · KvK 97688835 · Admin Panel · Intern gebruik · © 2024–2026</p>
+</main>
+<script src="../js/aurora4d.js"></script>
+</body>
+</html>

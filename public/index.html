@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Daltons AI — B2B Hot Leads op Abonnement | KvK 97688835</title>
+<meta name="description" content="Daltons AI levert door AI gescreende B2B hot leads op kwartaalabonnement. Score ≥70 gegarandeerd. KvK 97688835."/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://daltonsai.nl/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Daltons AI — AI die werkt voor jou"/>
+<meta property="og:description" content="B2B hot leads op abonnement. Score ≥70. KvK 97688835."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet"/></noscript>
+<link rel="preconnect" href="https://buy.stripe.com"/>
+<link rel="dns-prefetch" href="https://buy.stripe.com"/>
+<meta name="theme-color" content="#06060F"/>
+<style>
+:root{
+  --navy:#06060F;--card:rgba(19,19,37,.88);--border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.14);
+  --gold:#C9A227;--gold2:#E8C84A;--gold3:#F5E06E;
+  --cyan:#00D4FF;--cyan2:#67E8FF;--purple:#8B5CF6;
+  --green:#10B981;--red:#EF4444;
+  --white:#fff;--off:#E8E4D9;--gray:#8892A4;--gray2:#4A5568;
+  --ff-d:'Space Grotesk',sans-serif;--ff:'Inter',system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);--r:12px;--r2:8px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--navy);color:var(--white);font-family:var(--ff);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;text-decoration:none;}
+
+/* ── CANVAS — ALWAYS BEHIND EVERYTHING ── */
+#cv{position:fixed;inset:0;z-index:0;pointer-events:none;}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:3000;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(6,6,15,.78);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom:1px solid var(--border);transition:all .3s;}
+.nav.lit{border-color:rgba(0,212,255,.18);background:rgba(6,6,15,.92);}
+.logo{display:flex;align-items:center;gap:.7rem;}
+.logo-txt{font-family:var(--ff-d);font-size:1.15rem;font-weight:800;letter-spacing:-.02em;}
+.logo-txt em{color:var(--gold2);font-style:normal;}
+.logo-kvk{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-top:.06rem;}
+.nl{display:flex;gap:2rem;}
+.nl a{font-size:.8rem;font-weight:500;color:var(--gray);letter-spacing:.02em;transition:color .2s;}
+.nl a:hover{color:var(--cyan);}
+.nr{display:flex;gap:.7rem;align-items:center;}
+.btn-g{font-size:.78rem;font-weight:600;padding:.4rem 1rem;border:1px solid var(--border2);border-radius:var(--r2);color:var(--off);transition:all .2s;cursor:pointer;background:transparent;}
+.btn-g:hover{border-color:var(--gold2);color:var(--gold2);}
+.btn-c{font-size:.8rem;font-weight:700;padding:.44rem 1.3rem;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;border-radius:var(--r2);cursor:pointer;transition:all .2s;border:none;}
+.btn-c:hover{opacity:.88;transform:translateY(-1px);box-shadow:0 6px 24px rgba(201,162,39,.3);}
+
+/* ── LAYOUT — transparent sections ── */
+section{position:relative;z-index:2;}
+.wrap{max-width:1140px;margin:0 auto;padding:0 1.5rem;width:100%;}
+.s-hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6rem 1.5rem 3rem;background:transparent;}
+.s-xl{padding:7rem 1.5rem;background:transparent;}
+.s-lg{padding:5rem 1.5rem;background:transparent;}
+
+/* ── GLASS CARDS (let background through) ── */
+.glass{background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--border);border-radius:var(--r);}
+.glass-light{background:rgba(30,30,60,.65);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:var(--r);}
+
+/* ── DIVIDER ── */
+.div{height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);position:relative;z-index:2;}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.rv.in{opacity:1;transform:none;}
+.rv-l{opacity:0;transform:translateX(-28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.rv-l.in{opacity:1;transform:none;}
+.rv-r{opacity:0;transform:translateX(28px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
+.rv-r.in{opacity:1;transform:none;}
+
+/* ── EYEBROW ── */
+.ew{display:inline-flex;align-items:center;gap:.55rem;font-size:.66rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);margin-bottom:.85rem;}
+.ew::before{content:'';width:20px;height:1.5px;background:var(--cyan);border-radius:2px;opacity:.7;}
+.ew.g{color:var(--gold2);}
+.ew.g::before{background:var(--gold2);}
+
+/* ── TYPOGRAPHY ── */
+h1{font-family:var(--ff-d);font-size:clamp(3.2rem,7.5vw,7.5rem);font-weight:800;line-height:.93;letter-spacing:-4px;}
+h2{font-family:var(--ff-d);font-size:clamp(2rem,4.2vw,3.8rem);font-weight:800;line-height:1.04;letter-spacing:-2px;}
+h3{font-family:var(--ff-d);font-size:1.1rem;font-weight:700;}
+.lead{font-size:1.06rem;line-height:1.85;color:var(--gray);}
+.lead strong{color:var(--white);}
+.grad-g{background:linear-gradient(120deg,var(--gold2),var(--gold3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.grad-c{background:linear-gradient(120deg,var(--cyan),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--ff);font-weight:700;cursor:pointer;border:none;transition:all .22s var(--ease);}
+.btn-p{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-size:.9rem;padding:.95rem 2.4rem;border-radius:var(--r2);}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,162,39,.35);}
+.btn-s{background:rgba(0,212,255,.08);color:var(--cyan);font-size:.9rem;padding:.9rem 2.2rem;border-radius:var(--r2);border:1px solid rgba(0,212,255,.25);}
+.btn-s:hover{background:rgba(0,212,255,.16);transform:translateY(-2px);}
+.btn-lg{font-size:1rem;padding:1.1rem 2.8rem;border-radius:var(--r);}
+.btns{display:flex;gap:.8rem;flex-wrap:wrap;}
+.btns.c{justify-content:center;margin-top:2rem;}
+
+/* ── HERO BADGE ── */
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.28rem .8rem .28rem .45rem;background:rgba(0,212,255,.07);border:1px solid rgba(0,212,255,.18);border-radius:99px;font-size:.7rem;font-weight:600;color:var(--cyan);letter-spacing:.04em;margin-bottom:1.4rem;}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(16,185,129,.5);}50%{box-shadow:0 0 0 5px rgba(16,185,129,0);}}
+
+/* ── KPI BAR ── */
+.kpi-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:2.5rem;max-width:860px;margin-left:auto;margin-right:auto;}
+.kpi{padding:1.5rem 1.2rem;background:rgba(13,13,26,.82);backdrop-filter:blur(8px);text-align:center;}
+.kpi-n{font-family:var(--ff-d);font-size:2.2rem;font-weight:800;letter-spacing:-1.5px;line-height:1;color:var(--gold2);}
+.kpi-l{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-top:.25rem;}
+
+/* ── TRUST ── */
+.trust{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-top:1.6rem;}
+.tc{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .7rem;border:1px solid var(--border);border-radius:99px;font-size:.7rem;font-weight:600;color:var(--gray);background:rgba(19,19,37,.6);}
+.tc-dot{width:6px;height:6px;border-radius:50%;background:var(--green);}
+
+/* ── STEPS ── */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.step{padding:2rem 1.6rem;transition:all .3s;}
+.step:hover{transform:translateY(-4px);}
+.step-num{width:64px;height:64px;border-radius:50%;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--ff-d);font-size:1.2rem;font-weight:800;color:var(--cyan);margin-bottom:1.4rem;transition:all .3s;}
+.step:hover .step-num{background:rgba(0,212,255,.14);box-shadow:0 0 30px rgba(0,212,255,.2);}
+
+/* ── SCORE ── */
+.score-wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
+.s-row{display:flex;align-items:center;gap:.8rem;margin-bottom:.85rem;}
+.s-lbl{font-size:.78rem;font-weight:500;width:130px;flex-shrink:0;color:var(--gray);}
+.s-bar{flex:1;height:5px;background:rgba(255,255,255,.05);border-radius:99px;overflow:hidden;}
+.s-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--gold2));animation:sfill 1.8s ease-out both;}
+@keyframes sfill{from{width:0;}to{width:var(--w,0);}}
+.s-val{font-size:.78rem;font-weight:700;width:36px;text-align:right;color:var(--white);}
+.score-total{display:flex;align-items:center;gap:1rem;padding:.95rem 1.2rem;background:rgba(0,212,255,.05);border:1px solid rgba(0,212,255,.2);border-radius:var(--r2);margin-top:1.2rem;}
+.score-big{font-family:var(--ff-d);font-size:2.4rem;font-weight:800;color:var(--cyan);line-height:1;}
+.score-badge{font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .6rem;background:var(--green);color:#fff;border-radius:4px;}
+
+/* ── ROI ── */
+.roi-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;}
+.roi{padding:2rem;border-radius:var(--r);}
+.roi.bad{background:rgba(19,8,8,.8);border:1px solid rgba(239,68,68,.2);}
+.roi.good{background:rgba(8,8,0,.4);border:1px solid rgba(201,162,39,.3);position:relative;overflow:hidden;}
+.roi.good::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,162,39,.08),transparent);}
+.roi.good>*{position:relative;}
+.roi-lbl{font-size:.65rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin-bottom:.9rem;}
+.roi.good .roi-lbl{color:var(--gold2);}
+.roi-price{font-family:var(--ff-d);font-size:2.8rem;font-weight:800;letter-spacing:-2px;line-height:1;margin-bottom:.2rem;}
+.roi.bad .roi-price{color:var(--red);}
+.roi.good .roi-price{color:var(--gold2);}
+.roi-period{font-size:.76rem;color:var(--gray);margin-bottom:1.1rem;}
+.roi-item{font-size:.82rem;color:var(--gray);display:flex;align-items:flex-start;gap:.45rem;line-height:1.5;margin-bottom:.4rem;}
+.roi-item.b::before{content:'✗';color:var(--red);font-weight:800;flex-shrink:0;}
+.roi-item.ok::before{content:'✓';color:var(--gold2);font-weight:800;flex-shrink:0;}
+
+/* ── PRICING ── */
+.pc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.pc{padding:2.2rem 1.8rem;display:flex;flex-direction:column;position:relative;transition:all .3s;cursor:default;}
+.pc:hover{transform:translateY(-6px);}
+.pc.ft{border-color:rgba(201,162,39,.4);}
+.pc-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .85rem;border-radius:99px;white-space:nowrap;}
+.pc-tier{font-size:.63rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-bottom:.85rem;}
+.pc-price{font-family:var(--ff-d);font-size:3rem;font-weight:800;letter-spacing:-2px;line-height:1;margin-bottom:.2rem;}
+.pc-price sup{font-size:1.1rem;vertical-align:.45em;letter-spacing:0;font-weight:700;}
+.pc-cycle{font-size:.7rem;color:var(--gray);margin-bottom:.25rem;}
+.pc-equiv{font-size:.72rem;font-weight:700;color:var(--gold2);margin-bottom:1.2rem;}
+.pc-leads{font-size:.8rem;font-weight:700;color:var(--green);padding:.5rem .8rem;background:rgba(16,185,129,.08);border-radius:6px;margin-bottom:1.4rem;border-left:2px solid var(--green);}
+.pc-feats{flex:1;display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.8rem;}
+.pc-feat{display:flex;align-items:flex-start;gap:.5rem;font-size:.82rem;color:var(--gray);}
+.pc-feat svg{width:13px;height:13px;flex-shrink:0;margin-top:2px;color:var(--green);}
+.pc-btn{display:block;text-align:center;padding:.86rem;border-radius:var(--r2);font-family:var(--ff);font-weight:700;font-size:.82rem;letter-spacing:.04em;transition:all .2s;cursor:pointer;border:none;width:100%;}
+.pc-btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;}
+.pc-btn-gold:hover{box-shadow:0 6px 24px rgba(201,162,39,.35);transform:translateY(-1px);}
+.pc-btn-outline{background:transparent;border:1px solid var(--border2);color:var(--off);}
+.pc-btn-outline:hover{border-color:var(--gold2);color:var(--gold2);}
+
+/* ── FAQ ── */
+.faq-list{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:2.5rem;max-width:780px;margin-left:auto;margin-right:auto;}
+.fi{background:rgba(13,13,26,.75);backdrop-filter:blur(8px);}
+.fi+.fi{border-top:1px solid var(--border);}
+.fq{width:100%;padding:1.2rem 1.6rem;background:none;border:none;color:var(--white);font-family:var(--ff);font-size:.88rem;font-weight:600;text-align:left;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:background .2s;}
+.fq:hover{background:rgba(255,255,255,.03);}
+.fi-ico{width:15px;height:15px;flex-shrink:0;transition:transform .3s;color:var(--gray);}
+.fi.open .fi-ico{transform:rotate(45deg);color:var(--cyan);}
+.fa{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+.fi.open .fa{max-height:360px;}
+.fa-inner{padding:.2rem 1.6rem 1.3rem;color:var(--gray);font-size:.85rem;line-height:1.8;}
+
+/* ── CTA SECTION ── */
+.cta-box{border-radius:20px;padding:5rem 3rem;text-align:center;position:relative;overflow:hidden;border:1px solid rgba(201,162,39,.2);}
+.cta-box::before{content:'';position:absolute;inset:0;background:rgba(6,6,15,.6);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);}
+.cta-box::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(201,162,39,.12),transparent),radial-gradient(ellipse 50% 40% at 50% 100%,rgba(0,212,255,.08),transparent);}
+.cta-box>*{position:relative;z-index:1;}
+
+/* ── RECEIVE LIST ── */
+.recv{display:flex;flex-direction:column;gap:.7rem;margin-top:1.2rem;}
+.recv-item{display:flex;align-items:center;gap:.65rem;font-size:.86rem;color:var(--off);}
+.recv-item::before{content:'→';font-size:.8rem;color:var(--cyan);font-weight:700;flex-shrink:0;}
+
+/* ── FOOTER ── */
+footer{position:relative;z-index:2;background:rgba(6,6,15,.9);border-top:1px solid var(--border);padding:4rem 1.5rem 2rem;}
+.foot-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
+.foot-brand{font-family:var(--ff-d);font-size:1.1rem;font-weight:800;color:var(--gold2);margin-bottom:.25rem;}
+.foot-kvk{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gray2);margin-bottom:.8rem;}
+.foot-desc{color:var(--gray2);font-size:.8rem;line-height:1.7;max-width:240px;}
+.fcol h4{font-size:.6rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gray2);margin-bottom:.9rem;}
+.fcol ul{list-style:none;display:flex;flex-direction:column;gap:.4rem;}
+.fcol a{color:var(--gray);font-size:.8rem;transition:color .2s;}
+.fcol a:hover{color:var(--gold2);}
+.foot-bot{max-width:1140px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;font-size:.72rem;color:var(--gray2);}
+.foot-badges{display:flex;gap:.5rem;flex-wrap:wrap;}
+.foot-b{padding:.18rem .55rem;border:1px solid var(--border);border-radius:4px;font-size:.6rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray2);}
+
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:#131325;border:1px solid rgba(201,162,39,.3);border-radius:var(--r);padding:2.5rem;max-width:440px;width:90%;position:relative;}
+.modal-close{position:absolute;top:1rem;right:1rem;background:transparent;border:none;color:var(--gray);cursor:pointer;font-size:1.2rem;transition:color .2s;}
+.modal-close:hover{color:var(--white);}
+.modal-title{font-family:var(--ff-d);font-size:1.4rem;font-weight:800;margin-bottom:.3rem;}
+.modal-plan{font-size:.72rem;color:var(--gold2);font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.4rem;}
+.modal-label{font-size:.78rem;font-weight:600;color:var(--gray);margin-bottom:.4rem;display:block;}
+.modal-input{width:100%;padding:.75rem 1rem;background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:var(--r2);color:var(--white);font-family:var(--ff);font-size:.9rem;outline:none;transition:border-color .2s;}
+.modal-input:focus{border-color:var(--gold2);}
+.modal-input::placeholder{color:var(--gray2);}
+.modal-note{font-size:.72rem;color:var(--gray2);margin-top:.5rem;line-height:1.6;}
+.modal-submit{width:100%;margin-top:1.2rem;padding:1rem;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000;border:none;border-radius:var(--r2);font-family:var(--ff);font-weight:800;font-size:.9rem;cursor:pointer;transition:all .2s;letter-spacing:.03em;}
+.modal-submit:hover{opacity:.9;transform:translateY(-1px);box-shadow:0 6px 24px rgba(201,162,39,.35);}
+.modal-submit:disabled{opacity:.5;cursor:not-allowed;transform:none;}
+.modal-err{font-size:.78rem;color:var(--red);margin-top:.6rem;display:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){.score-wrap{grid-template-columns:1fr;gap:2.5rem;}.roi-grid{grid-template-columns:1fr;}.pc-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto;}.kpi-bar{grid-template-columns:repeat(2,1fr);}.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+@media(max-width:768px){.nav{padding:0 1.2rem;}.nl{display:none;}h1{letter-spacing:-2px;}.steps{grid-template-columns:1fr;}.cta-box{padding:3rem 1.5rem;}.foot-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- ══ FULL SCREEN 4D CANVAS ══ -->
+<canvas id="cv" aria-hidden="true"></canvas>
+
+<!-- ══ CHECKOUT MODAL ══ -->
+<div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-txt">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Sluiten">✕</button>
+    <div class="modal-title" id="modal-title-txt">Start jouw abonnement</div>
+    <div class="modal-plan" id="modal-plan-label"></div>
+    <label class="modal-label" for="modal-email">Zakelijk e-mailadres</label>
+    <input class="modal-input" type="email" id="modal-email" placeholder="naam@bedrijf.nl" autocomplete="email"/>
+    <p class="modal-note">Je wordt doorgestuurd naar Stripe voor veilige betaling. Daltons AI B.V. · KvK 97688835.</p>
+    <div class="modal-err" id="modal-err">Vul een geldig zakelijk e-mailadres in.</div>
+    <button class="modal-submit" id="modal-submit">Doorgaan naar betaling →</button>
+  </div>
+</div>
+
+<!-- ══ NAV ══ -->
+<header>
+<nav class="nav" id="nav">
+  <div class="logo">
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+      <circle cx="13" cy="13" r="3.2" fill="#C9A227"/>
+      <ellipse cx="13" cy="13" rx="11" ry="4.4" stroke="#C9A227" stroke-width="1.2" fill="none" transform="rotate(-38 13 13)" opacity=".9"/>
+      <ellipse cx="13" cy="13" rx="11" ry="4.4" stroke="#00D4FF" stroke-width="1" fill="none" transform="rotate(38 13 13)" opacity=".6"/>
+      <ellipse cx="13" cy="13" rx="11" ry="4.4" stroke="#C9A227" stroke-width=".8" fill="none" transform="rotate(90 13 13)" opacity=".3"/>
+    </svg>
+    <div><div class="logo-txt">Daltons<em> AI</em></div><div class="logo-kvk">KvK 97688835</div></div>
+  </div>
+  <div class="nl">
+    <a href="#how">Werkwijze</a><a href="#scoring">Kwaliteit</a>
+    <a href="#pricing">Abonnementen</a><a href="#faq">FAQ</a>
+  </div>
+  <div class="nr">
+    <a href="dashboard/" class="btn-g">Dashboard</a>
+    <button class="btn-c" onclick="openModal('growth')">Leads Bestellen →</button>
+  </div>
+</nav>
+</header>
+
+<!-- ══ HERO ══ -->
+<section class="s-hero" id="hero" aria-labelledby="h1">
+  <div class="wrap" style="text-align:center;">
+    <div class="rv">
+      <div class="hero-badge" style="margin:0 auto 1.4rem;"><span class="badge-dot"></span>Early Access — Direct starten, geen wachtrij</div>
+      <h1 id="h1"><span class="grad-c">AI die<br>werkt</span><br><span class="grad-g">voor jou.</span></h1>
+      <p class="lead" style="margin:1.6rem auto 0;max-width:540px;text-align:center;">Daltons AI bezorgt <strong>door AI gescreende B2B hot leads</strong> direct aan jouw salesteam. Score ≥70/100 gegarandeerd. Kwartaalabonnement. Geen handmatig prospectwerk.</p>
+      <div class="btns c">
+        <button class="btn btn-p btn-lg" onclick="openModal('growth')">Start Abonnement →</button>
+        <a href="#how" class="btn btn-s btn-lg">Hoe het werkt</a>
+      </div>
+      <div class="trust">
+        <div class="tc"><span class="tc-dot"></span>KvK 97688835</div>
+        <div class="tc"><span class="tc-dot"></span>AVG-compliant</div>
+        <div class="tc"><span class="tc-dot"></span>Stripe Betalingen</div>
+        <div class="tc"><span class="tc-dot"></span>Score ≥70 garantie</div>
+        <div class="tc"><span class="tc-dot"></span>n8n Geautomatiseerd</div>
+      </div>
+    </div>
+    <!-- KPI BAR -->
+    <div class="kpi-bar rv" style="transition-delay:.35s;">
+      <div class="kpi"><div class="kpi-n">≥70</div><div class="kpi-l">Score garantie</div></div>
+      <div class="kpi"><div class="kpi-n">5</div><div class="kpi-l">AI-criteria</div></div>
+      <div class="kpi"><div class="kpi-n">&lt;24u</div><div class="kpi-l">Eerste bezorging</div></div>
+      <div class="kpi"><div class="kpi-n">3mnd</div><div class="kpi-l">Kwartaalcyclus</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ HOW ══ -->
+<section class="s-xl" id="how">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;max-width:540px;margin:0 auto;">
+      <div class="ew" style="justify-content:center;">Werkwijze</div>
+      <h2>Drie stappen.<br><span class="grad-g">Één resultaat.</span></h2>
+      <p class="lead" style="margin-top:.9rem;text-align:center;">Jij omschrijft jouw ideale klant. Wij doen al het werk. Jij ontvangt gescreende hot leads.</p>
+    </div>
+    <div class="steps rv" style="transition-delay:.15s;">
+      <div class="step glass">
+        <div class="step-num">01</div>
+        <h3 style="margin-bottom:.5rem;">Jij levert het ICP</h3>
+        <p style="font-size:.84rem;color:var(--gray);line-height:1.72;">Branche, functietitel, bedrijfsgrootte, locatie. Geen ICP? Wij helpen je hem definiëren via een intakevragenlijst.</p>
+      </div>
+      <div class="step glass">
+        <div class="step-num">02</div>
+        <h3 style="margin-bottom:.5rem;">AI kwalificeert massaal</h3>
+        <p style="font-size:.84rem;color:var(--gray);line-height:1.72;">Ons geautomatiseerde systeem scoort honderden prospects op vijf kwaliteitsdimensies — 24/7, zonder menselijke tussenkomst.</p>
+      </div>
+      <div class="step glass">
+        <div class="step-num">03</div>
+        <h3 style="margin-bottom:.5rem;">Hot leads in jouw pipeline</h3>
+        <p style="font-size:.84rem;color:var(--gray);line-height:1.72;">Alleen ≥70 worden bezorgd als CRM-klaar bestand. Naam, bedrijf, functie, e-mail, LinkedIn, AI-score. Direct importeerbaar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ SCORING ══ -->
+<section class="s-xl" id="scoring">
+  <div class="wrap">
+    <div class="score-wrap rv">
+      <div>
+        <div class="ew g">AI Scoringssysteem</div>
+        <h2>Hoe scoort<br><span class="grad-g">onze AI een lead?</span></h2>
+        <p class="lead" style="margin-top:1rem;">Vijf meetbare criteria. Transparant. Alleen leads met totaalscore ≥70/100 worden bezorgd.</p>
+        <div class="recv">
+          <div class="recv-item">Naam, bedrijfsnaam, functietitel</div>
+          <div class="recv-item">Zakelijk e-mailadres + LinkedIn-URL</div>
+          <div class="recv-item">AI-score per dimensie (volledig transparant)</div>
+          <div class="recv-item">CSV/Excel — direct CRM-importeerbaar</div>
+          <div class="recv-item">Salesforce · HubSpot · Pipedrive · elk CRM</div>
+        </div>
+      </div>
+      <div class="glass" style="padding:2rem;">
+        <div style="font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:1rem;">5 AI-scoringsdimensies — max 100 punten</div>
+        <div class="s-row"><span class="s-lbl">Functietitel match</span><div class="s-bar"><div class="s-fill" style="--w:100%;animation-delay:.1s"></div></div><span class="s-val">25 pt</span></div>
+        <div class="s-row"><span class="s-lbl">Bedrijfsfit</span><div class="s-bar"><div class="s-fill" style="--w:100%;animation-delay:.2s"></div></div><span class="s-val">25 pt</span></div>
+        <div class="s-row"><span class="s-lbl">Bedrijfsgrootte</span><div class="s-bar"><div class="s-fill" style="--w:100%;animation-delay:.3s;background:linear-gradient(90deg,var(--gold),var(--gold2));"></div></div><span class="s-val">20 pt</span></div>
+        <div class="s-row"><span class="s-lbl">Marktafstemming</span><div class="s-bar"><div class="s-fill" style="--w:100%;animation-delay:.4s"></div></div><span class="s-val">15 pt</span></div>
+        <div class="s-row"><span class="s-lbl">Koopsignalen</span><div class="s-bar"><div class="s-fill" style="--w:100%;animation-delay:.5s;background:linear-gradient(90deg,var(--gold),var(--gold2));"></div></div><span class="s-val">15 pt</span></div>
+        <div class="score-total">
+          <div class="score-big">≥70</div>
+          <div><div style="font-size:.7rem;color:var(--gray);margin-bottom:.3rem;">/ 100 vereist</div><span class="score-badge">🔥 HOT LEAD</span></div>
+          <div style="font-size:.7rem;color:var(--gray);margin-left:auto;font-style:italic;">Enkel dan bezorgd →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ ROI ══ -->
+<section class="s-xl" id="roi">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;max-width:560px;margin:0 auto;">
+      <div class="ew" style="justify-content:center;">Kosten &amp; ROI</div>
+      <h2>Waarom Daltons AI<br><span class="grad-g">goedkoper is.</span></h2>
+      <p class="lead" style="margin-top:.8rem;text-align:center;">Een fulltime SDR kost je €3.000–5.000/mnd exclusief tools en overhead. Daltons AI kost een fractie.</p>
+    </div>
+    <div class="roi-grid rv" style="transition-delay:.15s;">
+      <div class="roi bad">
+        <div class="roi-lbl">Zelf doen / SDR inhuren</div>
+        <div class="roi-price">€3.500<sup style="font-size:1rem;">/mnd</sup></div>
+        <div class="roi-period">Gem. kosten fulltime SDR (excl. tools)</div>
+        <div class="roi-item b">Maanden werving &amp; onboarding</div>
+        <div class="roi-item b">Ziekteverzuim, management overhead</div>
+        <div class="roi-item b">Handmatig prospectwork = tijdverspilling</div>
+        <div class="roi-item b">Inconsistente leadkwaliteit</div>
+        <div class="roi-item b">Extra toolkosten €300–800/mnd</div>
+      </div>
+      <div class="roi good">
+        <div class="roi-lbl">Daltons AI — Growth Plan</div>
+        <div class="roi-price">€399<sup style="font-size:1rem;opacity:.65;">/mnd</sup></div>
+        <div class="roi-period">€1.197 per kwartaal · automatisch verlengd</div>
+        <div class="roi-item ok">Actief binnen 24 uur na activatie</div>
+        <div class="roi-item ok">100 AI-gescreende hot leads / kwartaal</div>
+        <div class="roi-item ok">Score ≥70 gegarandeerd per lead</div>
+        <div class="roi-item ok">Geen tools, training of overhead</div>
+        <div class="roi-item ok">Opzegbaar per kwartaal. Geen boetes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ PRICING ══ -->
+<section class="s-xl" id="pricing">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;max-width:540px;margin:0 auto;">
+      <div class="ew" style="justify-content:center;">Abonnementen</div>
+      <h2>Kies jouw plan.<br><span class="grad-g">Start vandaag.</span></h2>
+      <p class="lead" style="margin-top:.8rem;text-align:center;">Kwartaalabonnement. Automatisch verlengd. Opzegbaar per periode. Betalingen via Stripe.</p>
+    </div>
+    <div class="pc-grid rv" style="transition-delay:.15s;">
+
+      <div class="pc glass">
+        <div class="pc-tier">Starter Plan</div>
+        <div class="pc-price"><sup>€</sup>497</div>
+        <div class="pc-cycle">elke 3 maanden · automatisch</div>
+        <div class="pc-equiv">≈ €165 / maand</div>
+        <div class="pc-leads">30 hot leads per kwartaal</div>
+        <div class="pc-feats">
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>30 AI-gescreende hot leads (≥70)</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Gebaseerd op jouw ICP</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>CRM-klaar exportbestand</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Bezorging binnen 24 uur</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>E-mail support</div>
+        </div>
+        <button class="pc-btn pc-btn-outline" onclick="openModal('starter')">Start Starter Plan</button>
+      </div>
+
+      <div class="pc glass ft" style="border-color:rgba(201,162,39,.4);background:rgba(30,24,8,.7);">
+        <div class="pc-badge">🔥 Meest gekozen</div>
+        <div class="pc-tier">Growth Plan</div>
+        <div class="pc-price" style="color:var(--gold2);"><sup>€</sup>1.197</div>
+        <div class="pc-cycle">elke 3 maanden · automatisch</div>
+        <div class="pc-equiv">≈ €399 / maand</div>
+        <div class="pc-leads">100 hot leads per kwartaal</div>
+        <div class="pc-feats">
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Alles van Starter</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100 hot leads (score ≥70)</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Diepere ICP-verfijning</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Priority e-mail support</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Warm leads (50–69) als bonus</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Maandelijkse performance review</div>
+        </div>
+        <button class="pc-btn pc-btn-gold" onclick="openModal('growth')">Start Growth Plan</button>
+      </div>
+
+      <div class="pc glass">
+        <div class="pc-tier">Enterprise Plan</div>
+        <div class="pc-price"><sup>€</sup>2.997</div>
+        <div class="pc-cycle">elke 3 maanden · automatisch</div>
+        <div class="pc-equiv">≈ €999 / maand</div>
+        <div class="pc-leads">350+ hot leads per kwartaal</div>
+        <div class="pc-feats">
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Alles van Growth</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>350+ hot leads per kwartaal</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Dedicated campagne manager</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom ICP &amp; verfijning</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Direct support Slack/WhatsApp</div>
+          <div class="pc-feat"><svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Wekelijkse rapportage</div>
+        </div>
+        <button class="pc-btn pc-btn-outline" onclick="openModal('enterprise')">Start Enterprise Plan</button>
+      </div>
+
+    </div>
+    <p style="text-align:center;font-size:.72rem;color:var(--gray2);margin-top:1.2rem;">Automatisch verlengd elke 3 maanden · Opzegbaar per periode · Betalingen via Stripe · Excl. BTW</p>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ FAQ ══ -->
+<section class="s-lg" id="faq">
+  <div class="wrap">
+    <div class="rv" style="text-align:center;max-width:500px;margin:0 auto;">
+      <div class="ew" style="justify-content:center;">FAQ</div>
+      <h2><span class="grad-g">Veelgestelde vragen</span></h2>
+    </div>
+    <div class="faq-list rv" style="transition-delay:.1s;">
+      <div class="fi"><button class="fq" aria-expanded="false">Hoe worden leads gekwalificeerd?<svg class="fi-ico" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="fa"><div class="fa-inner">Ons AI-systeem scoort op vijf dimensies: functietitel (25pt), bedrijfsfit (25pt), bedrijfsgrootte (20pt), marktafstemming (15pt) en koopsignalen (15pt). Alleen leads met totaalscore ≥70 worden bezorgd.</div></div></div>
+      <div class="fi"><button class="fq" aria-expanded="false">Hoe werkt het kwartaalabonnement?<svg class="fi-ico" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="fa"><div class="fa-inner">Na activatie wordt je abonnement elke 3 maanden automatisch verlengd via Stripe. Eerste leads binnen 24 uur. Opzeggen via dashboard of e-mail uiterlijk 14 dagen voor factuurdatum.</div></div></div>
+      <div class="fi"><button class="fq" aria-expanded="false">In welk formaat ontvang ik de leads?<svg class="fi-ico" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="fa"><div class="fa-inner">CSV/Excel bestand met naam, bedrijfsnaam, functietitel, zakelijk e-mailadres, LinkedIn-URL en AI-score per dimensie. Direct importeerbaar in Salesforce, HubSpot of Pipedrive.</div></div></div>
+      <div class="fi"><button class="fq" aria-expanded="false">Zijn de leads AVG/GDPR-compliant?<svg class="fi-ico" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="fa"><div class="fa-inner">Ja. Alle leads zijn B2B zakelijke contactgegevens uit publieke zakelijke bronnen. B2B cold outreach op basis van gerechtvaardigd belang is toegestaan onder de AVG.</div></div></div>
+      <div class="fi"><button class="fq" aria-expanded="false">Wat heb ik nodig om te beginnen?<svg class="fi-ico" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="fa"><div class="fa-inner">Alleen een beschrijving van jouw ICP: branche, functietitels, bedrijfsgrootte en locatie. Geen tools installeren. Betaling via Stripe, leads in jouw inbox.</div></div></div>
+      <div class="fi"><button class="fq" aria-expanded="false">Kan ik opzeggen of van plan wisselen?<svg class="fi-ico" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="fa"><div class="fa-inner">Ja. Upgraden is direct actief. Downgraden of opzeggen geldt per volgende kwartaalperiode. Geen opzegkosten. E-mail naar Daltonsaisystems@gmail.com of via dashboard.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="div"></div>
+
+<!-- ══ CTA ══ -->
+<section class="s-xl">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <div class="ew" style="justify-content:center;color:rgba(0,212,255,.6);">Begin vandaag</div>
+      <h2 style="font-size:clamp(2.4rem,6vw,5.5rem);letter-spacing:-3px;color:var(--white);">De Daltons<br><span class="grad-g">komen eraan.</span></h2>
+      <p class="lead" style="text-align:center;margin:1.2rem auto 0;max-width:420px;color:rgba(255,255,255,.55);">Start jouw kwartaalabonnement. Eerste hot leads binnen 24 uur in jouw pipeline.</p>
+      <div class="btns c">
+        <button class="btn btn-p btn-lg" style="font-size:1rem;padding:1.15rem 3.5rem;" onclick="openModal('growth')">Start Abonnement →</button>
+      </div>
+      <p style="margin-top:1.4rem;font-size:.68rem;color:rgba(255,255,255,.25);letter-spacing:.06em;text-transform:uppercase;">Daltons AI B.V. · KvK 97688835 · Stripe · AVG-Compliant · n8n Geautomatiseerd</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="foot-grid">
+    <div><div class="foot-brand">Daltons AI</div><div class="foot-kvk">KvK 97688835 · Daltons AI B.V.</div><div class="foot-desc">AI-gescreende B2B hot leads op abonnement. De toekomst van salesontwikkeling.</div></div>
+    <div class="fcol"><h4>Product</h4><ul><li><a href="#how">Werkwijze</a></li><li><a href="#scoring">Kwaliteit</a></li><li><a href="#pricing">Abonnementen</a></li><li><a href="javascript:void(0)" onclick="openModal('growth')">Bestellen</a></li></ul></div>
+    <div class="fcol"><h4>Bedrijf</h4><ul><li><a href="#faq">FAQ</a></li><li><a href="mailto:Daltonsaisystems@gmail.com">Contact</a></li><li><a href="privacy-policy/">Privacy &amp; AVG</a></li><li><a href="terms/">Algemene Voorwaarden</a></li><li><a href="dpa/">DPA</a></li></ul></div>
+    <div class="fcol"><h4>Account</h4><ul><li><a href="dashboard/">Mijn Dashboard</a></li><li><a href="javascript:void(0)" onclick="openModal('growth')">Abonnement starten</a></li></ul></div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2024–2026 Daltons AI B.V. · KvK 97688835</span>
+    <div class="foot-badges"><span class="foot-b">AI-Powered</span><span class="foot-b">AVG-Compliant</span><span class="foot-b">KvK 97688835</span><span class="foot-b">Stripe</span><span class="foot-b">n8n</span></div>
+  </div>
+</footer>
+
+<script>
+/* ╔══════════════════════════════════════════════════════╗
+   ║  DALTONS AI — CONFIGURATIE                          ║
+   ║  Vul hieronder jouw Stripe + n8n waarden in         ║
+   ╚══════════════════════════════════════════════════════╝ */
+var CFG = {
+  // ► Stap 3 hieronder: plak hier jouw 3 Stripe Payment Link URLs (buy.stripe.com/...)
+  payment_links: {
+    starter:    'https://buy.stripe.com/cNi5kw7SabNi8AEfkk2kw02',
+    growth:     'https://buy.stripe.com/9B6dR2c8qcRm6sw8VW2kw03',
+    enterprise: 'https://buy.stripe.com/28EbIUegy5oU9EI5JK2kw04',
+  },
+  n8n_webhook: 'https://daltonsai.app.n8n.cloud/webhook/Stripe-Payment',
+};
+
+var PLAN_NAMES = {
+  starter:    'Starter Plan — 30 leads/kwartaal · €497',
+  growth:     'Growth Plan — 100 leads/kwartaal · €1.197',
+  enterprise: 'Enterprise Plan — 350+ leads/kwartaal · €2.997',
+};
+
+/* ══ SCROLL TRACKING ══ */
+var SY = 0, ticking = false;
+window.addEventListener('scroll', function() {
+  SY = window.scrollY;
+  if (!ticking) {
+    requestAnimationFrame(function() {
+      document.getElementById('nav').classList.toggle('lit', SY > 20);
+      ticking = false;
+    });
+    ticking = true;
+  }
+}, { passive: true });
+
+/* ══ MODAL ══ */
+var activePlan = 'growth';
+function openModal(plan) {
+  activePlan = plan;
+  document.getElementById('modal-plan-label').textContent = PLAN_NAMES[plan] || plan;
+  document.getElementById('modal-email').value = '';
+  document.getElementById('modal-err').style.display = 'none';
+  document.getElementById('modal-submit').disabled = false;
+  document.getElementById('modal-submit').textContent = 'Doorgaan naar betaling →';
+  document.getElementById('modal').classList.add('open');
+  setTimeout(function() { document.getElementById('modal-email').focus(); }, 100);
+}
+document.getElementById('modal-close').addEventListener('click', function() {
+  document.getElementById('modal').classList.remove('open');
+});
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === document.getElementById('modal')) document.getElementById('modal').classList.remove('open');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') document.getElementById('modal').classList.remove('open');
+});
+
+document.getElementById('modal-submit').addEventListener('click', function() {
+  var email = document.getElementById('modal-email').value.trim();
+  var errEl = document.getElementById('modal-err');
+  var btn = document.getElementById('modal-submit');
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    errEl.textContent = 'Vul een geldig e-mailadres in.';
+    errEl.style.display = 'block'; return;
+  }
+
+  var link = CFG.payment_links[activePlan];
+  if (!link || link.startsWith('PAYMENT_LINK')) {
+    errEl.textContent = 'Betaling tijdelijk niet beschikbaar. Mail Daltonsaisystems@gmail.com';
+    errEl.style.display = 'block'; return;
+  }
+
+  errEl.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Doorsturen naar Stripe...';
+
+  // 1. n8n webhook (non-blocking, captures lead before payment)
+  try {
+    fetch(CFG.n8n_webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        event: 'checkout_started',
+        plan: activePlan,
+        email: email,
+        timestamp: new Date().toISOString(),
+        source: window.location.href,
+      })
+    });
+  } catch(e) { /* silent */ }
+
+  // 2. Redirect to Stripe Payment Link with prefilled email
+  var sep = link.includes('?') ? '&' : '?';
+  window.location.href = link + sep + 'prefilled_email=' + encodeURIComponent(email);
+});
+
+/* ══ FULL 4D CANVAS — SCROLL-DRIVEN SCENE SYSTEM ══ */
+(function() {
+  var cv = document.getElementById('cv');
+  var ctx = cv.getContext('2d');
+  var W, H, t = 0;
+
+  function resize() { W = cv.width = window.innerWidth; H = cv.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  /* ── 4D Hypercube ── */
+  var V4 = [];
+  for (var i = 0; i < 16; i++)
+    V4.push([(i & 1) ? 1 : -1, (i >> 1 & 1) ? 1 : -1, (i >> 2 & 1) ? 1 : -1, (i >> 3 & 1) ? 1 : -1]);
+  var ED = [];
+  for (var a = 0; a < 16; a++) for (var b = a + 1; b < 16; b++) {
+    var x = a ^ b; if (x && !(x & (x - 1))) ED.push([a, b]);
+  }
+
+  function rot4(v, t1, t2) {
+    var x = v[0] * Math.cos(t1) - v[3] * Math.sin(t1), w = v[0] * Math.sin(t1) + v[3] * Math.cos(t1);
+    var y = v[1] * Math.cos(t2) - v[2] * Math.sin(t2), z = v[1] * Math.sin(t2) + v[2] * Math.cos(t2);
+    return [x, y, z, w];
+  }
+  function proj4(v) {
+    var s1 = 3.2 / (3.2 - v[3]), x3 = v[0] * s1, y3 = v[1] * s1, z3 = v[2] * s1;
+    var s2 = 3.6 / (3.6 - z3);
+    return [x3 * s2, y3 * s2];
+  }
+
+  /* ── SCENE SYSTEM ── */
+  var SCENES = [
+    // 0: Hero — cyan, large central tesseract
+    { x: .5, y: .42, sc: .155, r1: 0,          r2: 0,          cr: 0,   cg: 212, cb: 255, pr: 0,   pg: 212, pb: 255, bgA: .0,  bgB: .85 },
+    // 1: How — shift left, gold
+    { x: .35, y: .5, sc: .10,  r1: 1.2,         r2: .75,        cr: 201, cg: 162, cb: 39,  pr: 201, pg: 162, pb: 39,  bgA: .0,  bgB: .88 },
+    // 2: Scoring — right, purple, medium
+    { x: .65, y: .48, sc: .12, r1: 2.4,         r2: 1.48,       cr: 139, cg: 92,  cb: 246, pr: 139, pg: 92,  pb: 246, bgA: .0,  bgB: .88 },
+    // 3: ROI — center left, red/gold
+    { x: .42, y: .5, sc: .09,  r1: 3.6,         r2: 2.22,       cr: 239, cg: 68,  cb: 68,  pr: 201, pg: 162, pb: 39,  bgA: .0,  bgB: .90 },
+    // 4: Pricing — center, large gold
+    { x: .5,  y: .46, sc: .16, r1: 4.8,         r2: 2.97,       cr: 201, cg: 162, cb: 39,  pr: 232, pg: 200, pb: 74,  bgA: .0,  bgB: .88 },
+    // 5: CTA — center, full cyan, giant
+    { x: .5,  y: .44, sc: .18, r1: 6.28,        r2: 3.88,       cr: 0,   cg: 212, cb: 255, pr: 0,   pg: 212, pb: 255, bgA: .0,  bgB: .85 },
+  ];
+
+  function lerp(a, b, t2) { return a + (b - a) * t2; }
+  function easeInOut(t2) { return t2 < .5 ? 2 * t2 * t2 : -1 + (4 - 2 * t2) * t2; }
+
+  function getScene() {
+    var total = document.body.scrollHeight - window.innerHeight;
+    var p = total > 0 ? Math.min(1, SY / total) : 0;
+    var n = SCENES.length - 1;
+    var raw = p * n;
+    var idx = Math.min(Math.floor(raw), n - 1);
+    var frac = easeInOut(raw - idx);
+    var A = SCENES[idx], B = SCENES[Math.min(idx + 1, n)];
+    return {
+      x:  lerp(A.x,  B.x,  frac),
+      y:  lerp(A.y,  B.y,  frac),
+      sc: lerp(A.sc, B.sc, frac),
+      r1: lerp(A.r1, B.r1, frac),
+      r2: lerp(A.r2, B.r2, frac),
+      cr: lerp(A.cr, B.cr, frac),
+      cg: lerp(A.cg, B.cg, frac),
+      cb: lerp(A.cb, B.cb, frac),
+      pr: lerp(A.pr, B.pr, frac),
+      pg: lerp(A.pg, B.pg, frac),
+      pb: lerp(A.pb, B.pb, frac),
+    };
+  }
+
+  /* ── Particles ── */
+  var PTS = [];
+  for (var i = 0; i < 200; i++) PTS.push({
+    x: (Math.random() - .5) * 2.4, y: (Math.random() - .5) * 2.4, z: Math.random() * 2 - 1,
+    vx: (Math.random() - .5) * .00018, vy: (Math.random() - .5) * .00018,
+    r: .25 + Math.random() * .85, type: Math.floor(Math.random() * 3)
+  });
+
+  /* ── Robot drawing ── */
+  function drawRobot(rx, ry, sc2, color, alpha, bob) {
+    var a = alpha.toFixed(3);
+    var ry2 = ry + bob;
+    ctx.strokeStyle = color.replace('α', a);
+    ctx.fillStyle = color.replace('α', (alpha * .12).toFixed(3));
+    ctx.lineWidth = 1.2 * sc2;
+    // Head
+    ctx.beginPath();
+    ctx.rect(rx - 11 * sc2, ry2 - 36 * sc2, 22 * sc2, 17 * sc2);
+    ctx.fill(); ctx.stroke();
+    // Eyes
+    ctx.fillStyle = color.replace('α', (alpha * .9).toFixed(3));
+    ctx.fillRect(rx - 8 * sc2, ry2 - 32 * sc2, 5 * sc2, 3.5 * sc2);
+    ctx.fillRect(rx + 3 * sc2, ry2 - 32 * sc2, 5 * sc2, 3.5 * sc2);
+    // Antenna
+    ctx.strokeStyle = color.replace('α', (alpha * .7).toFixed(3));
+    ctx.beginPath();
+    ctx.moveTo(rx, ry2 - 36 * sc2);
+    ctx.lineTo(rx, ry2 - 44 * sc2);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(rx, ry2 - 45 * sc2, 2 * sc2, 0, Math.PI * 2);
+    ctx.fillStyle = color.replace('α', a);
+    ctx.fill();
+    // Body
+    ctx.fillStyle = color.replace('α', (alpha * .1).toFixed(3));
+    ctx.strokeStyle = color.replace('α', (alpha * .6).toFixed(3));
+    ctx.beginPath();
+    ctx.rect(rx - 14 * sc2, ry2 - 18 * sc2, 28 * sc2, 26 * sc2);
+    ctx.fill(); ctx.stroke();
+    // Chest core
+    ctx.beginPath();
+    ctx.arc(rx, ry2 - 5 * sc2, 4 * sc2, 0, Math.PI * 2);
+    ctx.fillStyle = color.replace('α', (alpha * .7).toFixed(3));
+    ctx.fill();
+    // Arms
+    ctx.strokeStyle = color.replace('α', (alpha * .45).toFixed(3));
+    ctx.fillStyle = color.replace('α', (alpha * .06).toFixed(3));
+    ctx.beginPath(); ctx.rect(rx - 21 * sc2, ry2 - 16 * sc2, 7 * sc2, 20 * sc2); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.rect(rx + 14 * sc2, ry2 - 16 * sc2, 7 * sc2, 20 * sc2); ctx.fill(); ctx.stroke();
+    // Legs
+    ctx.beginPath(); ctx.rect(rx - 12 * sc2, ry2 + 8 * sc2, 9 * sc2, 18 * sc2); ctx.fill(); ctx.stroke();
+    ctx.beginPath(); ctx.rect(rx + 3 * sc2,  ry2 + 8 * sc2, 9 * sc2, 18 * sc2); ctx.fill(); ctx.stroke();
+    // Glow
+    var g = ctx.createRadialGradient(rx, ry2, 0, rx, ry2, 60 * sc2);
+    g.addColorStop(0, color.replace('α', (alpha * .08).toFixed(3)));
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = g;
+    ctx.beginPath(); ctx.arc(rx, ry2, 60 * sc2, 0, Math.PI * 2); ctx.fill();
+  }
+
+  /* ── Perspective grid ── */
+  function drawGrid(scene) {
+    var vx = W * scene.x, vy = H * (scene.y - .1);
+    var alpha = .025;
+    ctx.strokeStyle = 'rgba(' + Math.round(scene.cr) + ',' + Math.round(scene.cg) + ',' + Math.round(scene.cb) + ',' + alpha + ')';
+    ctx.lineWidth = .8;
+    var lines = 14;
+    for (var i = 0; i <= lines; i++) {
+      var fx = W * i / lines;
+      ctx.beginPath(); ctx.moveTo(fx, H); ctx.lineTo(vx, vy); ctx.stroke();
+    }
+    var hLines = 8;
+    for (var j = 0; j <= hLines; j++) {
+      var fy = vy + (H - vy) * (j / hLines);
+      ctx.beginPath(); ctx.moveTo(0, fy); ctx.lineTo(W, fy); ctx.stroke();
+    }
+  }
+
+  /* ── Ambient glow blobs ── */
+  function drawGlow(scene) {
+    var r = Math.round(scene.cr), g = Math.round(scene.cg), b = Math.round(scene.cb);
+    // Primary glow behind tesseract
+    var grd = ctx.createRadialGradient(W * scene.x, H * scene.y, 0, W * scene.x, H * scene.y, Math.min(W, H) * .5);
+    grd.addColorStop(0, 'rgba(' + r + ',' + g + ',' + b + ',.045)');
+    grd.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, W, H);
+    // Secondary glow bottom
+    var grd2 = ctx.createRadialGradient(W * .5, H, 0, W * .5, H, H * .7);
+    grd2.addColorStop(0, 'rgba(' + Math.round(scene.pr) + ',' + Math.round(scene.pg) + ',' + Math.round(scene.pb) + ',.03)');
+    grd2.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = grd2;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  /* ── MAIN DRAW ── */
+  function draw() {
+    t += .003;
+    ctx.clearRect(0, 0, W, H);
+
+    // Background fill
+    ctx.fillStyle = 'rgba(6,6,15,1)';
+    ctx.fillRect(0, 0, W, H);
+
+    var sc = getScene();
+    var r = Math.round(sc.cr), g = Math.round(sc.cg), b = Math.round(sc.cb);
+    var col = function(a) { return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')'; };
+
+    // Ambient glows
+    drawGlow(sc);
+
+    // Perspective grid
+    drawGrid(sc);
+
+    // Tesseract
+    var cx = W * sc.x, cy = H * sc.y;
+    var scl = Math.min(W, H) * sc.sc;
+    var t1 = t + sc.r1, t2 = t * .618 + sc.r2;
+    var pj = V4.map(function(v) { return proj4(rot4(v, t1, t2)); });
+
+    // Draw edges
+    ED.forEach(function(e) {
+      var p1 = pj[e[0]], p2 = pj[e[1]];
+      var d = (V4[e[0]][3] + V4[e[1]][3] + 2) * .25;
+      var alpha = .04 + d * .14;
+      ctx.beginPath();
+      ctx.moveTo(cx + p1[0] * scl, cy + p1[1] * scl);
+      ctx.lineTo(cx + p2[0] * scl, cy + p2[1] * scl);
+      ctx.strokeStyle = col(alpha.toFixed(3));
+      ctx.lineWidth = .8 + d * 1.2;
+      ctx.stroke();
+    });
+
+    // Draw vertices with glow
+    pj.forEach(function(p, vi) {
+      var d = (V4[vi][3] + 1) * .5;
+      var vx2 = cx + p[0] * scl, vy2 = cy + p[1] * scl;
+      var vg = ctx.createRadialGradient(vx2, vy2, 0, vx2, vy2, 8 + d * 10);
+      vg.addColorStop(0, col((.1 + d * .18).toFixed(3)));
+      vg.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = vg;
+      ctx.beginPath(); ctx.arc(vx2, vy2, 8 + d * 10, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = col((.12 + d * .2).toFixed(3));
+      ctx.beginPath(); ctx.arc(vx2, vy2, 2 + d * 2.5, 0, Math.PI * 2); ctx.fill();
+    });
+
+    // Robot Daltons in the canvas background
+    var sp = Math.min(1, SY / Math.max(1, document.body.scrollHeight - window.innerHeight));
+    var robotY = H * .78 + sp * H * .1;
+    var robotSc = Math.min(W, H) * .0014;
+    var robotAlpha = .22 + sp * .12;
+
+    // Joe — red
+    var jBob = Math.sin(t * 1.1) * 6;
+    drawRobot(W * .18, robotY, robotSc, 'rgba(239,68,68,α)', robotAlpha, jBob);
+    // William — gold
+    var wBob = Math.sin(t * 1.05 + 1) * 6;
+    drawRobot(W * .36, robotY + 15 * robotSc, robotSc * .88, 'rgba(201,162,39,α)', robotAlpha, wBob);
+    // Jack — purple
+    var jkBob = Math.sin(t * .98 + 2) * 6;
+    drawRobot(W * .64, robotY + 22 * robotSc, robotSc * .78, 'rgba(139,92,246,α)', robotAlpha, jkBob);
+    // Averell — cyan
+    var aBob = Math.sin(t * 1.15 + 3) * 6;
+    drawRobot(W * .82, robotY + 30 * robotSc, robotSc * .7, 'rgba(0,212,255,α)', robotAlpha, aBob);
+
+    // Connection lines between robots
+    if (robotAlpha > .1) {
+      var robots = [
+        [W * .18, robotY + jBob],
+        [W * .36, robotY + 15 * robotSc + wBob],
+        [W * .64, robotY + 22 * robotSc + jkBob],
+        [W * .82, robotY + 30 * robotSc + aBob],
+      ];
+      var lineA = (robotAlpha * .15).toFixed(3);
+      ctx.setLineDash([4, 8]);
+      ctx.lineWidth = .7;
+      for (var ri = 0; ri < robots.length - 1; ri++) {
+        ctx.strokeStyle = 'rgba(255,255,255,' + lineA + ')';
+        ctx.beginPath();
+        ctx.moveTo(robots[ri][0], robots[ri][1]);
+        ctx.lineTo(robots[ri + 1][0], robots[ri + 1][1]);
+        ctx.stroke();
+      }
+      ctx.setLineDash([]);
+    }
+
+    // Particles
+    var camZ = 1.6;
+    PTS.forEach(function(p) {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x > 1.2) p.x = -1.2; if (p.x < -1.2) p.x = 1.2;
+      if (p.y > 1.2) p.y = -1.2; if (p.y < -1.2) p.y = 1.2;
+      var ps = camZ / (camZ - p.z);
+      var px2 = W * .5 + p.x * ps * W * .42;
+      var py2 = H * .5 + p.y * ps * H * .42 + SY * p.z * .00028;
+      if (py2 < -10 || py2 > H + 10) return;
+      var palpha = (.035 + ps * .055).toFixed(3);
+      var pc;
+      if (p.type === 0) pc = 'rgba(' + r + ',' + g + ',' + b + ',' + palpha + ')';
+      else if (p.type === 1) pc = 'rgba(201,162,39,' + palpha + ')';
+      else pc = 'rgba(139,92,246,' + palpha + ')';
+      ctx.beginPath();
+      ctx.arc(px2, py2, p.r * ps, 0, Math.PI * 2);
+      ctx.fillStyle = pc; ctx.fill();
+    });
+
+    // Scanline pulse across robots (every 4s)
+    var scanT = t % 4;
+    if (scanT < .8) {
+      var scanX = W * (.18 + (scanT / .8) * .64);
+      var scanGrd = ctx.createLinearGradient(scanX - 60, 0, scanX + 60, 0);
+      scanGrd.addColorStop(0, 'rgba(0,212,255,0)');
+      scanGrd.addColorStop(.5, 'rgba(0,212,255,0.06)');
+      scanGrd.addColorStop(1, 'rgba(0,212,255,0)');
+      ctx.fillStyle = scanGrd;
+      ctx.fillRect(scanX - 60, H * .6, 120, H * .25);
+    }
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ══ FAQ ══ */
+document.querySelectorAll('.fq').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var fi = btn.closest('.fi'), open = fi.classList.contains('open');
+    document.querySelectorAll('.fi.open').forEach(function(x) {
+      x.classList.remove('open'); x.querySelector('.fq').setAttribute('aria-expanded', 'false');
+    });
+    if (!open) { fi.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+  });
+});
+
+/* ══ REVEAL ══ */
+var io = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: .1 });
+document.querySelectorAll('.rv,.rv-l,.rv-r').forEach(function(el) { io.observe(el); });
+</script>
+</body>
+</html>

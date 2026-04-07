@@ -99,9 +99,7 @@ export function BillingPageContent({ user, currentPlan, subscription }: BillingP
             <Zap className="h-3 w-3" />
             AI-gedreven lead generation
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            Campagne Plannen
-          </h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">Campagne Plannen</h1>
           <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto">
             {currentPlan !== 'free'
               ? `Je zit op het ${PLANS[currentPlan].name} plan. Beheer je campagnes hieronder.`
@@ -115,13 +113,7 @@ export function BillingPageContent({ user, currentPlan, subscription }: BillingP
             </p>
           )}
           {currentPlan !== 'free' && (
-            <Button
-              variant="outline"
-              size="sm"
-              className="mt-5"
-              onClick={handleManageBilling}
-              disabled={portalLoading}
-            >
+            <Button variant="outline" size="sm" className="mt-5" onClick={handleManageBilling} disabled={portalLoading}>
               {portalLoading ? 'Laden...' : 'Betalingen Beheren'}
             </Button>
           )}
@@ -211,11 +203,7 @@ export function BillingPageContent({ user, currentPlan, subscription }: BillingP
                 {/* CTA Button */}
                 <Button
                   className={`w-full mt-1 h-11 font-semibold transition-all ${
-                    isCurrentPlan
-                      ? 'border-2'
-                      : plan === 'free'
-                        ? planButtonClass.free
-                        : planButtonClass[plan]
+                    isCurrentPlan ? 'border-2' : plan === 'free' ? planButtonClass.free : planButtonClass[plan]
                   }`}
                   variant={isCurrentPlan ? 'outline' : 'default'}
                   disabled={isCurrentPlan || plan === 'free' || loading !== null}
@@ -225,7 +213,11 @@ export function BillingPageContent({ user, currentPlan, subscription }: BillingP
                     <span className="flex items-center gap-2">
                       <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24" fill="none">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                        />
                       </svg>
                       Laden...
                     </span>
